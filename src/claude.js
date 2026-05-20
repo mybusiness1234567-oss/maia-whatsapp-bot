@@ -3,7 +3,7 @@
  * Text- und Vision-Anfragen an die Anthropic API
  */
 
-const Anthropic = require('anthropic').default;
+const Anthropic = require('@anthropic-ai/sdk').default;
 const { MODULES } = require('./modules');
 
 const client = new Anthropic({
