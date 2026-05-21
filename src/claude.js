@@ -3,7 +3,7 @@
  * Text- und Vision-Anfragen an die Anthropic API
  */
 
-const Anthropic = require('anthropic').default;
+const Anthropic = require('@anthropic-ai/sdk').default;
 const { MODULES } = require('./modules');
 
 const client = new Anthropic({
@@ -56,7 +56,7 @@ async function callClaudeWithImage(moduleId, imageBuffer, mimeType, userText) {
 
   const response = await client.messages.create({
     model: MODEL,
-    max_tokens: 1200, // Mehr Tokens für Bildanalyse
+    max_tokens: 1200,
     system: visionPrompt,
     messages: [{
       role: 'user',
