@@ -3,14 +3,14 @@
  * Text- und Vision-Anfragen an die Anthropic API
  */
 
-const Anthropic = require('@anthropic-ai/sdk').default;
+const Anthropic = require('anthropic').default;
 const { MODULES } = require('./modules');
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY
 });
 
-const MODEL = 'claude-sonnet-4-6';
+const MODEL = 'claude-opus-4-6';
 const MAX_TOKENS = 800;
 
 /**
