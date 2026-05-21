@@ -142,7 +142,6 @@ async function handleTextMessage(from, text) {
   }
 
   // ── An Claude senden ───────────────────────────────────
- await sendReaction(from, undefined, '🤔'); // "Denkt nach" Indikator
 
   // Nachricht in Historie speichern
   addMessage(from, 'user', text, activeModule);
